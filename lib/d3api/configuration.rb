@@ -1,11 +1,11 @@
 module D3api
   module Configuration
     REGIONAL_BASE_URL = {
-      :us => 'us.battle.net',
-      :eu => 'eu.battle.net',
-      :kr => 'kr.battle.net',
-      :tw => 'tw.battle.net',
-      :ch => 'www.battlenet.com.cn'
+      :us => 'https://us.battle.net/api/d3/',
+      :eu => 'https://eu.battle.net/api/d3/',
+      :kr => 'https://kr.battle.net/api/d3/',
+      :tw => 'https://tw.battle.net/api/d3/',
+      :ch => 'https://www.battlenet.com.cn/api/d3/'
     }
 
     DEFAULT_ENDPOINT = REGIONAL_BASE_URL[:us]
