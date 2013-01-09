@@ -1,3 +1,6 @@
+[![Code
+Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/phereford/d3api)
+
 # D3api
 
 This gem is a ruby wrapper to Blizzard's [Diablo 3

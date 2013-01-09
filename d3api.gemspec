@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Patrick Hereford']
   gem.email         = ['phereford@gmail.com']
   gem.description   = %q{Diablo 3 API ruby wrapper}
-  gem.summary       = %q{Blizzards D3 API}
+  gem.summary       = %q{Blizzard's Diablo 3 API}
   gem.homepage      = 'https://github.com/phereford/d3api'
 
   gem.files         = `git ls-files`.split($/)
@@ -21,4 +21,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'faraday_middleware', '~> 0.9.0'
 
   gem.add_development_dependency 'rspec', '2.12.0'
+  gem.add_development_dependency 'vcr', '~> 2.4.0'
 end
