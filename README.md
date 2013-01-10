@@ -1,5 +1,5 @@
 [![Build
-Status](https://travis-ci.org/phereford/d3api.png)](https://travis-ci.org/phereford/d3api)
+Status](https://travis-ci.org/phereford/d3api.png?branch=master)](https://travis-ci.org/phereford/d3api)
 [![Code
 Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/phereford/d3api)
 
@@ -111,7 +111,6 @@ If you have any comments questions or concerns, please let me know.
 ## ToDos
 1. Implement Authentication per Blizzards protocol (allow 10,000
    unsigned requests or 50,000 signed requests).
-2. Rspec tests for api calls.
 
 ## Contributing
 
