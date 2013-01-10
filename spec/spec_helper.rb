@@ -1,5 +1,5 @@
+require 'd3api'
 require 'rspec'
-require 'factory_girl_rails'
 require 'vcr'
 
 VCR.configure do |config|
@@ -10,8 +10,5 @@ end
 
 RSpec.configure do |config|
   config.extend VCR::RSpec::Macros
-  config.include FactoryGirl::Syntax::Methods
   config.mock_with :rspec
-  config.infer_base_class_for_anonymous_controllers = false
-  config.use_transactional_fixtures = false
 end

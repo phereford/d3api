@@ -2,7 +2,7 @@ module D3api
   class Follower < BaseModel
     include D3api::Request
 
-    def initialize(region, follower_type)
+    def initialize(region = :us, follower_type = 'scoundrel')
       json_response = find(region, follower_type)
 
       super json_response

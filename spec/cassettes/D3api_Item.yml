@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://us.battle.net/api/d3/data/item/ChkIsp-JsQsSBwgEFRaK1aUwCTiYBEAAYJgEGNPX06ILUAhYAA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      date:
+      - Thu, 10 Jan 2013 00:51:23 GMT
+      server:
+      - Apache
+      x-frame-options:
+      - SAMEORIGIN
+      last-modified:
+      - Fri, 12 Oct 2012 12:30:08 GMT
+      content-language:
+      - en-US
+      vary:
+      - Accept-Encoding
+      connection:
+      - close
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        ewoiaWQiIDogIlBhbnRzXzAwMSIsCiJuYW1lIiA6ICJDbG90aCBQYW50cyIs
+        CiJpY29uIiA6ICJwYW50c18wMDFfbW9ua19tYWxlIiwKImRpc3BsYXlDb2xv
+        ciIgOiAid2hpdGUiLAoidG9vbHRpcFBhcmFtcyIgOiAiaXRlbS9DaGtJc3At
+        SnNRc1NCd2dFRlJhSzFhVXdDVGlZQkVBQVlKZ0VHTlBYMDZJTFVBaFlBQSIs
+        CiJyZXF1aXJlZExldmVsIiA6IDEsCiJpdGVtTGV2ZWwiIDogMiwKImJvbnVz
+        QWZmaXhlcyIgOiAwLAoidHlwZU5hbWUiIDogIlBhbnRzIiwKInR5cGUiIDog
+        ewoiaWQiIDogIkxlZ3MiLAoidHdvSGFuZGVkIiA6IGZhbHNlCn0sCiJhcm1v
+        ciIgOiB7CiJtaW4iIDogNi4wLAoibWF4IiA6IDYuMAp9LAoiYXR0cmlidXRl
+        cyIgOiBbIF0sCiJhdHRyaWJ1dGVzUmF3IiA6IHsKIkR1cmFiaWxpdHlfTWF4
+        IiA6IHsKIm1pbiIgOiA1MzYuMCwKIm1heCIgOiA1MzYuMAp9LAoiQXJtb3Jf
+        SXRlbSIgOiB7CiJtaW4iIDogNi4wLAoibWF4IiA6IDYuMAp9LAoiRHVyYWJp
+        bGl0eV9DdXIiIDogewoibWluIiA6IDUzNi4wLAoibWF4IiA6IDUzNi4wCn0K
+        fSwKInNvY2tldEVmZmVjdHMiIDogWyBdLAoiZ2VtcyIgOiBbIF0KfQ==
+    http_version: 
+  recorded_at: Thu, 10 Jan 2013 00:51:26 GMT
+recorded_with: VCR 2.4.0

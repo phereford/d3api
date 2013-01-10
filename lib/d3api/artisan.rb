@@ -2,7 +2,7 @@ module D3api
   class Artisan < BaseModel
     include D3api::Request
 
-    def initialize(region, artisan_type)
+    def initialize(region = :us, artisan_type = 'blacksmith')
       json_response = find(region, artisan_type)
 
       super json_response
