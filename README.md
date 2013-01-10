@@ -1,3 +1,5 @@
+[![Build
+Status](https://travis-ci.org/phereford/d3api.png)](https://travis-ci.org/phereford/d3api)
 [![Code
 Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/phereford/d3api)
 
