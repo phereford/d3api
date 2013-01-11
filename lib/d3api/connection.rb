@@ -9,7 +9,6 @@ module D3api
           c.request :url_encoded
           c.request :json
           c.response :json
-          c.response :logger
           c.adapter Faraday.default_adapter
         end
       end

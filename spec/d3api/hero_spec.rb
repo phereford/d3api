@@ -1,27 +1,28 @@
 require 'spec_helper'
 
-describe D3api::Hero, '.new' do
+describe D3api::Hero do
   use_vcr_cassette
+  subject { D3api::Hero.new(:us, 'yojymbu', '1249', '30255685') }
 
-  it 'returns a response' do
-    @hero = D3api::Hero.new(:us, 'yojymbu', '1249', '30255685')
-    @hero.should_not be_nil
+  after do
+    VCR.eject_cassette
   end
-end
 
-describe D3api::Hero, 'top level hash to methods' do
-  use_vcr_cassette
-  subject { @hero = D3api::Hero.new(:us, 'yojymbu', '1249', '30255685') }
+  context '.new' do
+    it { should_not be nil }
+  end
 
-  its(:id)          { should be_kind_of(Integer) }
-  its(:name)        { should be_kind_of(String) }
-  its(:gender)      { should be_kind_of(Integer) }
-  its(:level)       { should be_kind_of(Integer) }
-  its(:hardcore)    { should be_kind_of(TrueClass || FalseClass) }
-  its(:skills)      { should be_kind_of(Hash) }
-  its(:items)       { should be_kind_of(Hash) }
-  its(:followers)   { should be_kind_of(Hash) }
-  its(:stats)       { should be_kind_of(Hash) }
-  its(:progress)    { should be_kind_of(Hash) }
-  its(:kills)       { should be_kind_of(Hash) }
+  context '#set_method' do
+    its(:id)             { should eql 30255685 }
+    its(:name)           { should eql 'Belgan' }
+    its(:hero_class)     { should eql 'barbarian' }
+    its(:gender)         { should eql 'Male' }
+    its(:level)          { should eql 45 }
+    its(:hardcore)       { should be_kind_of(TrueClass) }
+    its(:last_updated)   { should be_kind_of(Time) }
+    its(:active_skills)  { should be_kind_of(Array) }
+    its(:passive_skills) { should be_kind_of(Array) }
+    its(:items)          { should be_kind_of(Array) }
+    its(:followers)      { should be_kind_of(Array) }
+  end
 end

@@ -1,6 +1,9 @@
 require 'd3api'
 require 'rspec'
 require 'vcr'
+require 'simplecov'
+
+SimpleCov.start
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/cassettes'
