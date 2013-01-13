@@ -1,6 +1,6 @@
 module D3api
   class Follower < BaseModel
-    attr_accessor :slug, :name, :portrait, :skills
+    attr_accessor :slug, :name, :portrait, :active_skills
 
     def initialize(region, follower_type)
       json_response = find(region, follower_type)
@@ -19,7 +19,7 @@ module D3api
       self.slug = values['slug']
       self.name = values['name']
       self.portrait = values['portrait']
-      self.skills = nil
+      self.active_skills = nil
     end
   end
 end

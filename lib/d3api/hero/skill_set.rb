@@ -1,5 +1,5 @@
 module D3api
-  class HeroSkills
+  class HeroSkillSet
     attr_accessor :skill_set
 
     def initialize(skill_type, *attributes)

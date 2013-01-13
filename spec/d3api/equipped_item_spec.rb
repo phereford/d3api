@@ -1,15 +1,7 @@
 require 'spec_helper'
 
 describe D3api::EquippedItem do
-  subject { D3api::EquippedItem.new(
-    [ 'head', {'id' => 'Helm_104',
-      'name' => 'Abyssal Visage',
-      'icon' => 'helm_104_barbarian_male',
-      'displayColor' => 'yellow',
-      'tooltipParams' =>
-        'item/Cj4Ite7E6QkSBwgEFTr1Tl0d0pJdSR0wjxxFHb1b6EgdhgJj6iILCAAVy_4BABgKICAwDTjIA0AASAtQDGD_Axj01PfUC1ACWAA' }
-    ]
-  ) }
+  subject { D3api::EquippedItem.new( YAML.load_file( './spec/fixtures/equipped_item.yml' ) ) }
 
   context '#set_method' do
     its(:location)       { should eql 'head' }

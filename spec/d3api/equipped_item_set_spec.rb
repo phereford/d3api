@@ -1,21 +1,7 @@
 require 'spec_helper'
 
 describe D3api::EquippedItemSet do
-  subject { D3api::EquippedItemSet.new(
-    {'head' =>
-      {'id' => 'Helm_104',
-      'name' => 'Abyssal Visage',
-      'icon' => 'helm_104_barbarian_male',
-      'displayColor' => 'yellow',
-      'tooltipParams' => 'item/Cj4Ite7E6QkSBwgEFTr1Tl0d0pJdSR0wjxxFHb1b6EgdhgJj6iILCAAVy_4BABgKICAwDTjIA0AASAtQDGD_Axj01PfUC1ACWAA'},
-    'torso'=>
-      {'id' => 'ChestArmor_102',
-      'name' => 'Cleansing Mail',
-      'icon' => 'chestarmor_102_barbarian_male',
-      'displayColor' => 'yellow',
-      'tooltipParams' => 'item/CowBCNvS4ewCEgcIBBXqHRlgHRrEUXQdt8Ji6h2eI7xIHQRFP-IiCwgAFcf-AQAYFCAeMAk43AJAAEgGUAxg_QNqJQoMCAAQ5_mb84CAgIA7EhUIm7'}
-    }
-  )}
+  subject { D3api::EquippedItemSet.new( YAML.load_file( './spec/fixtures/equipped_item_set.yml' )['equippedItemSet'] ) }
 
   context '#set_method' do
     its(:item_set) { should be_kind_of(Array) }

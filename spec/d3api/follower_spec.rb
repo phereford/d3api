@@ -16,6 +16,6 @@ describe D3api::Follower do
     its(:slug)     { should eql 'scoundrel' }
     its(:name)     { should eql 'Scoundrel' }
     its(:portrait) { should eql 'scoundrel' }
-    its(:skills)   { should be nil }
+    its(:active_skills)   { should be nil }
   end
 end

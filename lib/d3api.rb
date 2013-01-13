@@ -7,15 +7,14 @@ module D3api
   autoload :Career, 'd3api/career'
 
   autoload :Hero, 'd3api/hero'
-  autoload :HeroSet, 'd3api/hero_set'
+  autoload :HeroSet, 'd3api/hero/set'
+  autoload :HeroSkillSet, 'd3api/hero/skill_set'
+  autoload :HeroStats, 'd3api/hero/stats'
+  autoload :HeroFollowerSet, 'd3api/hero/follower_set'
+  autoload :HeroFollower, 'd3api/hero/follower'
 
-  autoload :EquippedItem, 'd3api/equipped_item'
-  autoload :EquippedItemSet, 'd3api/equipped_item_set'
-
-  autoload :HeroSkills, 'd3api/hero_skills'
-
-  autoload :HeroFollowerSet, 'd3api/hero_follower_set'
-  autoload :HeroFollower, 'd3api/hero_follower'
+  autoload :EquippedItem, 'd3api/item/equipped_item'
+  autoload :EquippedItemSet, 'd3api/item/equipped_item_set'
 
   autoload :Skill, 'd3api/skill'
   autoload :Item, 'd3api/item'
