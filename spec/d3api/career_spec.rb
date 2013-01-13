@@ -1,27 +1,34 @@
 require 'spec_helper'
 
-describe D3api::Career, '.new' do
+describe D3api::Career do
   use_vcr_cassette
+  subject { D3api::Career.new(:us, 'yojymbu', '1249') }
 
-  it 'returns a response' do
-    @career = D3api::Career.new(:us, 'yojymbu', '1249')
-    @career.should_not be_nil
+  after do
+    VCR.eject_cassette
   end
-end
 
-describe D3api::Career, 'top level hash methods from BaseModel' do
-  use_vcr_cassette
-  subject { @career = D3api::Career.new(:us, 'yojymbu', '1249') }
+  context '.new' do
+    it { should_not be nil }
+  end
 
-  its(:heroes)              { should be_kind_of(Array) }
-  its(:lastHeroPlayed)      { should be_kind_of(Integer) }
-  its(:lastUpdated)         { should be_kind_of(Integer) }
-  its(:artisans)            { should be_kind_of(Array) }
-  its(:hardcoreArtisans)    { should be_kind_of(Array) }
-  its(:kills)               { should be_kind_of(Hash) }
-  its(:timePlayed)          { should be_kind_of(Hash) }
-  its(:fallenHeroes)        { should be_kind_of(Array) }
-  its(:battleTag)           { should be_kind_of(String) }
-  its(:progression)         { should be_kind_of(Hash) }
-  its(:hardcoreProgression) { should be_kind_of(Hash) }
+  context '#set_method' do
+    its(:last_hero_played)         { should be_kind_of(Integer) }
+    its(:heroes)                   { should be_kind_of(Array) }
+    its(:last_updated)             { should be_kind_of(Time) }
+    its(:artisans)                 { should be_kind_of(Array) }
+    its(:hardcore_artisans)        { should be_kind_of(Array) }
+    its(:monster_kills)            { should be_kind_of(Integer) }
+    its(:elite_kills)              { should be_kind_of(Integer) }
+    its(:hardcore_monster_kills)   { should be_kind_of(Integer) }
+    its(:barbarian_time_played)    { should be_kind_of(Float) }
+    its(:demon_hunter_time_played) { should be_kind_of(Float) }
+    its(:monk_time_played)         { should be_kind_of(Float) }
+    its(:witch_doctor_time_played) { should be_kind_of(Float) }
+    its(:wizard_time_played)       { should be_kind_of(Float) }
+    its(:fallen_heroes)            { should be nil }
+    its(:battle_tag)               { should eql 'Yojymbu#1249' }
+    its(:progression)              { should be nil }
+    its(:hardcore_progression)     { should be nil }
+  end
 end

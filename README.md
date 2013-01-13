@@ -48,15 +48,16 @@ This will return a Career object with json values. I tried my best to
 implement nice methods to get through the values such as:
 ```    
 @career.heroes #=> returns an array of heroes 
-@career.lastHeroPlayed #=> returns the id of last hero played
-@career.lastUpdated 
+@career.last_hero_played #=> returns the id of last hero played
+@careerlast_updated.
 @career.artisans #=> returns a hash of your arisan information
-@career.kills['monsters'] #=> returns an integer
+@career.monster_kills #=> returns an integer
 ```
 
 There is a ton of data gleaned from the career object. Just look at
 [Blizzard's Diablo 3 api docs](https://github.com/Blizzard/d3-api-docs)
-for more information.
+for more information. You can also look through the respc tests to get a
+better idea of what the methods are to utilize.
 
 ### Hero
 
@@ -70,7 +71,7 @@ To get a user's Diablo 3 hero, you need to know 4 things:
 @hero = D3api::Hero.new :us, 'yojymbu', '1249', '30255685' #=>
 returns hero object
 @hero.name #=> Returns name of character
-@hero.heroClass #=> Returns class of character
+@hero.hero_class #=> Returns class of character
 @hero.skills #=> returns an array of hashes for active and passive
 skills
 @hero.items #=> returns an array of hashes

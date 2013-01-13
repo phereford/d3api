@@ -23,4 +23,6 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'rspec', '2.12.0'
   gem.add_development_dependency 'vcr', '~> 2.4.0'
+  gem.add_development_dependency 'pry'
+  gem.add_development_dependency 'simplecov'
 end

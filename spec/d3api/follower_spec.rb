@@ -1,20 +1,21 @@
 require 'spec_helper'
 
-describe D3api::Follower, '.new' do
+describe D3api::Follower do
   use_vcr_cassette
+  subject { D3api::Follower.new(:us, 'scoundrel') }
 
-  it 'returns a response' do
-    @follower = D3api::Follower.new(:us, 'scoundrel')
-    @follower.should_not be_nil
+  after do
+    VCR.eject_cassette
   end
-end
 
-describe D3api::Follower, 'top level hash to methods' do
-  use_vcr_cassette
-  subject { @follower = D3api::Follower.new(:us, 'scoundrel') }
+  context '.new' do
+    it { should_not be nil }
+  end
 
-  its(:slug)     { should be_kind_of(String) }
-  its(:name)     { should be_kind_of(String) }
-  its(:portrait) { should be_kind_of(String) }
-  its(:skills)   { should be_kind_of(Hash) }
+  context '#set_method' do
+    its(:slug)     { should eql 'scoundrel' }
+    its(:name)     { should eql 'Scoundrel' }
+    its(:portrait) { should eql 'scoundrel' }
+    its(:skills)   { should be nil }
+  end
 end
