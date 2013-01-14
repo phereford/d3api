@@ -1,5 +1,11 @@
 module D3api
   class Follower < BaseModel
+    FOLLOWER_MAPPINGS = {
+      :slug => 'slug',
+      :name => 'name',
+      :portrait => 'portrait',
+      :active_skills => nil
+    }
     attr_accessor :slug, :name, :portrait, :active_skills
 
     def initialize(region, follower_type)
@@ -7,19 +13,12 @@ module D3api
 
       values = super json_response
 
-      set_method(values)
+      set_method(values, FOLLOWER_MAPPINGS)
     end
 
     private
     def find(region, follower_type)
       get(region, "data/follower/#{follower_type}")
-    end
-
-    def set_method(values)
-      self.slug = values['slug']
-      self.name = values['name']
-      self.portrait = values['portrait']
-      self.active_skills = nil
     end
   end
 end
