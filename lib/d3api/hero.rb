@@ -1,5 +1,13 @@
 module D3api
   class Hero < BaseModel
+    HERO_MAPPINGS = {
+      :id => 'id',
+      :name => 'name',
+      :hero_class => 'class',
+      :level => 'level',
+      :hardcore => 'hardcore'
+    }
+
     include D3api::Request
     attr_accessor :id, :name, :hero_class, :gender,
                   :level, :hardcore, :last_updated,
@@ -11,7 +19,8 @@ module D3api
 
       values = super json_response
 
-      set_method(values)
+      set_method(values, HERO_MAPPINGS)
+      set_hero(values)
     end
 
     # stats class
@@ -21,13 +30,8 @@ module D3api
       get(region, "profile/#{battletag_name}-#{battletag_id}/hero/#{hero_id}")
     end
 
-    def set_method(values)
-      self.id = values['id']
-      self.name = values['name']
-      self.hero_class = values['class']
+    def set_hero(values)
       self.gender = determine_gender(values['gender'])
-      self.level = values['level']
-      self.hardcore = values['hardcore']
       self.last_updated = Time.at(values['last-updated'])
       self.items ||= D3api::EquippedItemSet
         .new(values['items'])
@@ -41,7 +45,6 @@ module D3api
       self.followers ||= D3api::HeroFollowerSet
         .new(values['followers'])
         .follower_set
-
       self.stats ||= D3api::HeroStats
         .new(values['stats'])
     end

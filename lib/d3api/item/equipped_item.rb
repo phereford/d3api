@@ -1,5 +1,13 @@
 module D3api
-  class EquippedItem
+  class EquippedItem < BaseModel
+    EQUIPPED_ITEM_MAPPINGS = {
+      :id => 'id',
+      :name => 'name',
+      :icon => 'icon',
+      :display_color => 'displayColor',
+      :tooltip_params => 'tooltipParams'
+    }
+
     attr_accessor :location, :name, :icon, :display_color,
                   :tooltip_params, :id
 
@@ -7,17 +15,8 @@ module D3api
       location = array[0]
       attributes = array[1]
 
-      set_method(location, attributes)
-    end
-
-    private
-    def set_method(location, attributes)
       self.location = location
-      self.id = attributes['id']
-      self.name = attributes['name']
-      self.icon = attributes['icon']
-      self.display_color = attributes['displayColor']
-      self.tooltip_params = attributes['tooltipParams']
+      set_method(attributes, EQUIPPED_ITEM_MAPPINGS)
     end
   end
 end
