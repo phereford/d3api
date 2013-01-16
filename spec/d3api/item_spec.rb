@@ -12,7 +12,7 @@ describe D3api::Item do
     it { should_not be nil}
   end
 
-  context 'set_method' do
+  context 'set_method', 'non-weapon' do
     its(:name)                   { should eql 'Cloth Pants' }
     its(:icon)                   { should eql 'pants_001_monk_male' }
     its(:display_color)          { should be_kind_of(String) }
@@ -27,5 +27,14 @@ describe D3api::Item do
     its(:attributes)             { should be_kind_of(Array) }
     its(:socket_effects)         { should be nil }
     its(:salvage)                { should be nil }
+  end
+
+  context 'set_method', 'weapon' do
+    subject { D3api::Item.new(:us, 'COGHsoAIEgcIBBXIGEoRHYQRdRUdnWyzFB2qXu51MA04kwNAAFAKYJMD') }
+
+    its(:min_dps)                { should eql 206.69999241828918 }
+    its(:max_dps)                { should eql 206.69999241828918 }
+    its(:min_attacks_per_second) { should eql 1.2999999523162842 }
+    its(:max_attacks_per_second) { should eql 1.2999999523162842 }
   end
 end

@@ -6,6 +6,7 @@ module D3api
       :portrait => 'portrait',
       :active_skills => nil
     }
+
     attr_accessor :slug, :name, :portrait, :active_skills
 
     def initialize(region, follower_type)

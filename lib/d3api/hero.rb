@@ -8,7 +8,6 @@ module D3api
       :hardcore => 'hardcore'
     }
 
-    include D3api::Request
     attr_accessor :id, :name, :hero_class, :gender,
                   :level, :hardcore, :last_updated,
                   :items, :active_skills, :passive_skills,

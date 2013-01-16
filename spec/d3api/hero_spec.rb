@@ -18,7 +18,7 @@ describe D3api::Hero do
     its(:hero_class)     { should eql 'barbarian' }
     its(:gender)         { should eql 'Male' }
     its(:level)          { should eql 45 }
-    its(:hardcore)       { should be_kind_of(TrueClass) }
+    its(:hardcore)       { should eql true }
     its(:last_updated)   { should be_kind_of(Time) }
     its(:active_skills)  { should be_kind_of(Array) }
     its(:passive_skills) { should be_kind_of(Array) }

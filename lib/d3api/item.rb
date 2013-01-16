@@ -10,6 +10,7 @@ module D3api
       :bonus_affixes => 'bonusAffixes',
       :attributes => 'attributes'
     }
+
     attr_accessor :name, :icon, :tooltip_params, :display_color,
                   :required_level, :item_level, :bonus_affixes,
                   :attributes, :min_dps, :max_dps, :min_attacks_per_second,
