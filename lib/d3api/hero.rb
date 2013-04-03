@@ -5,11 +5,12 @@ module D3api
       :name => 'name',
       :hero_class => 'class',
       :level => 'level',
-      :hardcore => 'hardcore'
+      :hardcore => 'hardcore',
+      :paragon_level => 'paragonLevel'
     }
 
     attr_accessor :id, :name, :hero_class, :gender,
-                  :level, :hardcore, :last_updated,
+                  :level, :hardcore, :paragon_level, :last_updated,
                   :items, :active_skills, :passive_skills,
                   :followers, :stats
 
