@@ -22,6 +22,7 @@ describe D3api::Hero do
     its(:last_updated)   { should be_kind_of(Time) }
     its(:active_skills)  { should be_kind_of(Array) }
     its(:passive_skills) { should be_kind_of(Array) }
+    its(:paragon_level)  { should eql 0 }
     its(:items)          { should be_kind_of(Array) }
     its(:followers)      { should be_kind_of(Array) }
   end
