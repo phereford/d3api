@@ -2,7 +2,9 @@ require 'd3api'
 require 'rspec'
 require 'vcr'
 require 'simplecov'
+require 'coveralls'
 
+Coveralls.wear!
 SimpleCov.start
 
 VCR.configure do |config|

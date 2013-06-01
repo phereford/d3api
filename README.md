@@ -2,6 +2,7 @@
 Status](https://travis-ci.org/phereford/d3api.png?branch=master)](https://travis-ci.org/phereford/d3api)
 [![Code
 Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/phereford/d3api)
+[![Coverage Status](https://coveralls.io/repos/phereford/d3api/badge.png)](https://coveralls.io/r/phereford/d3api)
 
 # D3api
 
